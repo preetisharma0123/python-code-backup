@@ -35,7 +35,6 @@ class LinkedList(object):
         while current:
             if index == position:
                 return current
-                 
             else:
                 index +=1
                 current = current.next
@@ -57,19 +56,15 @@ class LinkedList(object):
             elif position ==1:
                 new_element.next = self.head
                 self.head = new_element
-        
             index +=1
-            current = current.next
-            
+            current = current.next   
         
         raise Exception('invalid position')
     
     
     def delete(self, value):
         """Delete the first node with a given value."""
-        current = self.head
-        count = 1
-        
+        current = self.head        
         if current.value == value:
             self.head = current.next
             return
